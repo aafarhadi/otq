@@ -2,21 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { DetailprodukComponent } from './detailproduk/detailproduk.component';
+
+import { DasarService } from './dasar.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
-    DetailprodukComponent
+    routingComponents
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DasarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

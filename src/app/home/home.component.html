@@ -7,13 +7,16 @@
 
   <h3>Produk Terbaru</h3>
   <div class="row">
-    <div class="col-sm-3">a</div>
-    <div class="col-sm-3">s</div>
-    <div class="col-sm-3">d</div>
-    <div class="col-sm-3">f</div>
+    
+    <div *ngFor="let produk of produks" class="col-sm-3">
+      <a [routerLink]="['/detail/'+produk.permalink]" ><strong>{{produk.nama}}</strong></a><br />
+      <img [src]="produk.thumbnail" width="150"> <br />
+      {{produk.harga}}      
+    </div>
+
   </div>
 
-  <div>
+  <div style="margin-top: 50px;">
     <a [routerLink]="['/about']" routerLinkActive="btn btn-success" class="btn btn-primary">ke about</a>
   </div>
 </div>

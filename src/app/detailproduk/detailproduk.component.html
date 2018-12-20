@@ -5,15 +5,15 @@
       </h2>  
     </div>
   
-    <h3>nama produk</h3>
-    <div>gambar </div>
-    <div>Harga: xx </div>
-    <div>deskripsi </div>
+    <h3>{{produk_detail.nama}}</h3>
+    <div><img [src]="produk_detail.file_foto" width="300"> </div>
+    <div>Harga: {{produk_detail.harga}} </div>
+    <div>{{produk_detail.deskripsi}} </div>
 
 
 
   
-    <div>
+    <div style="margin-top: 50px;">
         <a [routerLink]="['/home']" routerLinkActive="btn btn-success" class="btn btn-primary">ke home</a>
       </div>
   </div>
