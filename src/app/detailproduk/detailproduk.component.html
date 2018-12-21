@@ -5,10 +5,13 @@
       </h2>  
     </div>
   
-    <h3>{{produk_detail.nama}}</h3>
-    <div><img [src]="produk_detail.file_foto" width="300"> </div>
-    <div>Harga: {{produk_detail.harga}} </div>
-    <div>{{produk_detail.deskripsi}} </div>
+    <div *ngIf="produk_detail">
+      <h3>{{produk_detail.nama}}</h3>
+      <div><img [src]="produk_detail.file_foto" width="300"> </div>
+      <div>Harga: {{produk_detail.harga}} </div>
+      <div>{{produk_detail.deskripsi}} </div>
+    </div>
+    <div *ngIf="!(produk_detail)">Loading..</div>
 
 
 

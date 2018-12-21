@@ -20,8 +20,8 @@ export class HomeComponent implements OnInit {
     this.dasarService.hit_api_get('get_produk_terbaru').subscribe(
       (respon) => {
         this.produks = respon['data'];
-        console.log('hasilnya adalah');
-        console.log(this.produks);
+        //console.log('hasilnya adalah');
+        console.log(respon);
       },
       (error) => console.log(error)
     );
